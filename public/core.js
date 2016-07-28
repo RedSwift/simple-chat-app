@@ -10,10 +10,10 @@ app.controller('MainController', function ($scope, socket) {
   $scope.sendMsg = function () {
     event.preventDefault()
     socket.emit('send msg', $scope.msgText)
+    $scope.msgText = ''
   }
   socket.on('get msg', function (data) {
     $scope.msgs.push(data)
-    $scope.msgText = ''
     $scope.$digest()
   })
 })
