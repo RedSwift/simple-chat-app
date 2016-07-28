@@ -1,7 +1,7 @@
 var app = angular.module('chatApp', [])
 
 app.factory('socket', function () {
-  var socket = io.connect('http://localhost:3000/')
+  var socket = io.connect('http://dangular-app.herokuapp.com/')
   return socket
 })
 
