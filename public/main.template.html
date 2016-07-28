@@ -1,9 +1,9 @@
 <h1>Chat App</h1>
-<div ng-controller="MainController">
+<div>
 <div id="chatWrap">
-  <p ng-repeat="msg in msgs track by $index">{{ msg }}</p>
+  <p ng-repeat="msg in $ctrl.msgs track by $index">{{ msg }}</p>
 </div>
-<form action="" ng-submit="sendMsg()">
-  <input type="text" ng-model="msgText">
+<form action="" ng-submit="$ctrl.sendMsg()">
+  <input type="text" ng-model="$ctrl.msgText">
 </form>
 </div>
