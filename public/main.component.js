@@ -1,8 +1,9 @@
 angular.module('chatApp')
   .component('mainChat', {
     templateUrl: 'main.template.html',
-    controller: function ($scope, socket) {
+    controller: function ($scope, $routeParams, socket) {
       var ctrl = this
+      this.userName = $routeParams.user
       this.msgs = []
       this.sendMsg = function () {
         event.preventDefault()

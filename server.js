@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'))
 app.use(express.static(__dirname + '/bower_components'))
 
 io.on('connection', (socket) => {
-  console.log('a user has connected')
+  console.log(`a user has connected`)
   socket.on('disconnect', () => {
     console.log('a user has disconnected')
   })

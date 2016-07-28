@@ -1,4 +1,6 @@
 <h1>Chat App</h1>
+<p>Logged in as: {{$ctrl.userName}}</p>
+<hr>
 <div>
 <div id="chatWrap">
   <p ng-repeat="msg in $ctrl.msgs track by $index">{{ msg }}</p>
